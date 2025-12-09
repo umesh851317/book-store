@@ -1,0 +1,41 @@
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+.account{
+       display: flex;
+       flex-direction: column;
+       width: 100% ;
+       padding: 35px;
+       gap: 10px;
+}
+.account > .btn {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+.account .btn > button {
+       border: solid;
+       height: 40px;
+       width: 75px;
+       border-radius: 9px;
+       background-color: blue;
+       color: aliceblue;
+}
+.account > .btn h1{
+       font-size: 50px;
+       font-weight: 600;
+}
+.account > .details{
+       display: flex;
+       flex-direction: column;
+       font-size: x-large;
+       gap: 5px;
+}
+.account > .details input,
+.account > .details span{
+       border: solid;
+       padding: 0 5px;
+}

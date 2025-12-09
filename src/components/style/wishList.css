@@ -1,0 +1,51 @@
+.change>.lista>.head>h2 {
+    font-weight: 700;
+    font-size: large;
+    padding: 10px;
+}
+
+.change>.lista>.wishbook>.book-delete {
+    border-top: 1px solid#cecaca;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.change>.lista>.wishbook>.book-delete>.book {
+    display: flex;
+}
+
+.change>.lista>.wishbook>.book-delete>.book>.images>img {
+    height: 100px;
+    width: 70px;
+    background-color: aquamarine;
+}
+
+.change>.lista>.wishbook>.book-delete>.book>.details {
+    padding-left: 20px;
+}
+.change>.lista>.wishbook>.book-delete>.book>.details>.title{
+       font-size: 15px;
+    font-family: Rajdhani, sans-serif;
+    font-weight: bold;
+}
+.change>.lista>.wishbook>.book-delete>.book>.details>.price {
+    display: flex;
+    gap: 6px;
+}
+
+.change>.lista>.wishbook>.book-delete>.book>.details>.price>.curr-price {
+    color: black;
+    font-weight: bold;
+}
+
+.change>.lista>.wishbook>.book-delete>.book>.details>.price>.total-price {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.change>.lista>.wishbook>.book-delete>.book>.details>.price>.discount {
+    color: green;
+    font-weight: 600;
+}

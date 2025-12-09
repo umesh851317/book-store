@@ -1,0 +1,30 @@
+.sign{
+       display: flex;
+       flex-direction: column;
+       gap: 17px;
+       width: 100%;
+       height: inherit;
+}
+.sign > input{
+       border: 1px solid;
+       width: 100%;
+       height: 50px;
+       border-radius: 15px;
+       padding: 10px;
+}.forget{
+       color: rgb(68, 68, 215);
+       margin: -5px 0;
+}
+.sign > button{
+       width: 100%;
+       border: solid;
+       height: 50px;
+       border-radius: 15px;
+       background-color: blue;
+       color: aliceblue;
+}
+.sign > .signUp{
+       text-align: center;
+       margin: 5px 0 15px;
+       color: rgb(28, 28, 237);
+}

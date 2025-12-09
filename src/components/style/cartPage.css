@@ -1,0 +1,386 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       scrollbar-width: none;
+}
+
+.spinner {
+       position: relative;
+       top: 250px;
+       width: 30px;
+       height: 30px;
+       border: 4px solid #ccc;
+       border-top-color: #333;
+       border-radius: 50%;
+       animation: spin 0.8s linear infinite;
+       margin: auto;
+}
+
+@keyframes spin {
+       to {
+              transform: rotate(360deg);
+       }
+}
+
+.cartPage {
+       min-height: 90vh;
+       width: 100vw;
+}
+
+.cartPage>h1 {
+       border-bottom: 2px solid;
+       margin: 50px 10px;
+       padding: 5px;
+       font: 600;
+       font-size: x-large;
+}
+
+.cartPage>.cart {
+       width: 100%;
+       height: auto;
+       /* border: solid; */
+       /* position: relative; */
+       gap: 10px;
+       display: flex;
+       align-items: flex-start;
+}
+
+.cartPage>.cart>.cartItems {
+       width: 65%;
+       /* border: solid; */
+       height: auto;
+       margin: 15px;
+       padding: 0 15px;
+}
+
+.cartPage>.cart>.cartItems>h1 {
+       font-weight: 600;
+       font-size: xx-large;
+       border-bottom: 2px solid;
+       padding: 10px;
+}
+
+.cartPage>.cart>.cartItems>div {
+       /* border: solid; */
+       display: flex;
+       gap: 15px;
+       border-bottom: 1px solid;
+       padding: 8px 0;
+}
+
+.cartPage>.cart>.cartItems>div>.img_add {
+       /* border: solid; */
+       min-width: 200px;
+       padding: 5px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 10px;
+}
+
+.cartPage>.cart>.cartItems>div>.img_add img {
+       height: 100%;
+       width: 70%;
+
+}
+
+.cartPage>.cart>.cartItems>div>.img_add>.btn {
+       border: 1px solid;
+       border-radius: 5px;
+       height: 40px;
+       display: flex;
+       min-width: 150px;
+       justify-content: center;
+       overflow: hidden;
+}
+
+.cartPage>.cart>.cartItems>div>.img_add>.btn button {
+       border: 1px solid gray;
+       flex: 1;
+}
+
+.cartPage>.cart>.cartItems>div>.img_add>.btn span {
+       flex: 1;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+
+.cartPage>.cart>.cartItems>div>.details {
+       display: flex;
+       flex-direction: column;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.title {
+       font-size: xx-large;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.other {
+       display: flex;
+       color: gray;
+       font-size: large;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.prise {
+       display: flex;
+       gap: 10px;
+       font-size: x-large;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.prise .curr {
+       font-weight: 600;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.prise .totalPrise {
+       font-weight: 600;
+       color: gray;
+       text-decoration: line-through;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.prise .disCount {
+       color: green;
+       font-weight: 600;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.stoke {
+       font-size: larger;
+       color: green;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.btn {
+       display: flex;
+       justify-content: space-around;
+       font-size: larger;
+       gap: 20px;
+}
+
+.cartPage>.cart>.cartItems>div>.details>.btn button {
+       border: 1px solid;
+       border-radius: 7px;
+       padding: 2px 4px;
+       background-color: rgb(222, 231, 54);
+}
+
+
+
+.cartPage>.cart>.payment {
+       width: 30%;
+       margin: 20px;
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       position: relative;
+       border: solid;
+       min-height: 100vh;
+       align-self: flex-start;
+}
+
+.cartPage>.cart>.payment>.order {
+       width: 90%;
+       height: fit-content;
+       margin: 20px;
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       position: sticky;
+       top: 10vh;
+       align-self: flex-start;
+}
+
+.cartPage>.cart>.payment>.order>.amount {
+       display: flex;
+       flex-direction: column;
+       gap: 2px;
+}
+
+.cartPage>.cart>.payment>.order>.amount>h1 {
+       color: gray;
+       font-weight: 700;
+       font-size: x-large;
+       margin: 3px 0;
+}
+
+.cartPage>.cart>.payment>.order>.amountdiv {
+       display: flex;
+       justify-content: space-between;
+       font-weight: 600;
+       font-size: 16px;
+}
+
+.cartPage>.cart>.payment>.order>.amount>.total {
+       font-size: large;
+}
+
+.cartPage>.cart>.payment>.order>.amount>span {
+       font-size: 15px;
+       color: chartreuse;
+}
+
+.cartPage>.cart>.payment>.order>.btn {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+}
+
+.cartPage>.cart>.payment>.order>.btn button {
+       width: inherit;
+       height: 35px;
+       border: solid;
+       border-radius: 5px;
+       background-color: rgb(193, 231, 58);
+}
+
+
+
+
+
+
+
+
+
+main>.login {
+       display: flex;
+       min-height: 100vh;
+       justify-content: center;
+       align-items: center;
+}
+
+main>.login a {
+       border: 1px solid;
+       width: 55px;
+       border-radius: 5px;
+       text-align: center;
+       background-color: blue;
+       color: white;
+       padding: 2px;
+}
+
+
+.cartPage>.saveLater {
+       /* width: 100%; */
+       display: flex;
+       height: auto;
+       /* margin: 15px; */
+       padding: 0 25px;
+       flex-wrap: wrap;
+       gap: 50px 30px;
+       border: solid;
+}
+
+.cartPage>.saveLater>h1 {
+       width: 100%;
+       border-bottom: 1px solid;
+       font-size: xx-large;
+       font-weight: 600;
+       padding: 15px 0;
+}
+
+.cartPage>.saveLater>div {
+       /* border: solid; */
+       max-width: 50%;
+       display: flex;
+       gap: 15px;
+       padding: 8px 0;
+}
+
+.cartPage>.saveLater>div>.img_add {
+       /* border: solid; */
+       min-width: 200px;
+       padding: 5px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 10px;
+}
+
+.cartPage>.saveLater>div>.img_add a {
+       min-width: 200px;
+}
+
+.cartPage>.saveLater>div>.img_add img {
+       height: 100%;
+       width: 70%;
+
+}
+
+.cartPage>.saveLater>div>.img_add>.btn {
+       border: 1px solid;
+       border-radius: 5px;
+       height: 40px;
+       display: flex;
+       min-width: 150px;
+       justify-content: center;
+       overflow: hidden;
+}
+
+.cartPage>.saveLater>div>.img_add>.btn button {
+       border: 1px solid gray;
+       flex: 1;
+}
+
+.cartPage>.saveLater>div>.img_add>.btn span {
+       flex: 1;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+
+.cartPage>.saveLater>div>.details {
+       display: flex;
+       flex-direction: column;
+}
+
+.cartPage>.saveLater>div>.details>.title {
+       font-size: xx-large;
+}
+
+.cartPage>.saveLater>div>.details>.other {
+       display: flex;
+       color: gray;
+       font-size: large;
+}
+
+.cartPage>.saveLater>div>.details>.prise {
+       display: flex;
+       gap: 10px;
+       font-size: x-large;
+}
+
+.cartPage>.saveLater>div>.details>.prise .curr {
+       font-weight: 600;
+}
+
+.cartPage>.saveLater>div>.details>.prise .totalPrise {
+       font-weight: 600;
+       color: gray;
+       text-decoration: line-through;
+}
+
+.cartPage>.saveLater>div>.details>.prise .disCount {
+       color: green;
+       font-weight: 600;
+}
+
+.cartPage>.saveLater>div>.details>.stoke {
+       font-size: larger;
+       color: green;
+}
+
+.cartPage>.saveLater>div>.details>.btn {
+       display: flex;
+       justify-content: space-around;
+       font-size: larger;
+       gap: 20px;
+}
+
+.cartPage>.saveLater>div>.details>.btn button {
+       border: 1px solid;
+       border-radius: 7px;
+       padding: 2px 4px;
+       background-color: rgb(222, 231, 54);
+}

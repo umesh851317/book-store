@@ -1,0 +1,45 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+.account {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       padding: 35px;
+       gap: 10px;
+}
+
+.account>.div1 {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+.account>.div1>h1 {
+       font-size: 50px;
+       font-weight: 600;
+
+}
+
+.account>.div1>button {
+       border: solid;color: white;
+       height: 35px;
+       width: 50px;
+       border-radius: 8px;
+       background-color: green;
+
+}
+
+.account>.details {
+       display: flex;
+       flex-direction: column;
+       font-size: x-large;
+       gap: 5px;
+}
+
+.account>.details span {
+       border: solid;
+}

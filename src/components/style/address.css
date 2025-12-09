@@ -1,0 +1,145 @@
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+
+.address {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       gap: 25px;
+}
+
+.address>.headingAddress {
+       font-size: xx-large;
+       font-weight: 600;
+       margin: 0;
+}
+
+.address>.add,
+.address>.details {
+       border: 1px solid gray;
+       border-radius: 5px;
+       width: 100%;
+}
+
+.address>.add {
+       padding: 15px;
+       background-color: rgb(242, 240, 240);
+       width: 100%;
+       height: auto;
+}
+
+.address>.add>button {
+       font-size: larger;
+}
+
+.address>.add>.inpAdd {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+       width: 100%;
+       height: auto;
+}
+
+.address>.add>.inpAdd>h1 {
+       font-size: larger;
+       font-weight: 600;
+}
+
+.address>.add>.inpAdd>.inp {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 15px;
+       width: 100%;
+       height: auto;
+}
+
+.address>.add>.inpAdd>.inp>span {
+       width: 100%;
+       border: 1px solid black;
+       border-radius: 2px;
+       display: flex;
+       flex-direction: column;
+       padding: 3px;
+       gap: 2px;
+       font-size: small;
+}
+
+.address>.add>.inpAdd>.inp>span:nth-child(5) {
+       grid-column: 1/-1;
+}
+
+.address>.add>.inpAdd>.inp>span input:focus {
+       outline: none;
+       border: none;
+}
+
+.address>.add>.inpAdd>.btn {
+       /* margin-top: 100px; */
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       position: relative;
+       padding: 0 50px;
+}
+
+.address>.add>.inpAdd>.btn>button {
+       border: none;
+       width: 15%;
+       border-radius: 10px;
+       padding: 5px;
+       font-size: large;
+}
+
+.address>.add>.inpAdd>.btn>button:first-child {
+       background-color: #436aeb;
+       color: white;
+       box-shadow: 2px 2px 2px gray;
+}
+
+.address>.add>.inpAdd>.btn>button:last-child {
+       background-color: aliceblue;
+}
+
+.address>.add>.inpAdd>.btn>button:first-child:hover {
+       background-color: green;
+}
+
+.address>.add>.inpAdd>.btn>button:last-child:hover {
+       color: red;
+}
+
+.address>.details {
+       display: flex;
+       width: 100%;
+       flex-direction: column;
+}
+.address>.details>.emptyAddress{
+       font-size: larger;
+       padding: 5px;
+}
+.address>.details>.showDetail {
+       display: flex;
+       justify-content: space-between;
+       padding: 15px;
+       width: 100%;
+}
+.address>.details>.showDetail .det {
+       display: flex;
+       flex: 1;
+       flex-direction: column;
+}
+.address>.details>.showDetail >.btn{
+       padding: 10px;
+       display: flex;
+       justify-content: space-between;
+}.address>.details>.showDetail >.btn>button{
+       padding: 0 15px;
+       font-size: larger;
+}.address>.details>.showDetail >.btn>button:first-child{
+       color: blue;
+}.address>.details>.showDetail >.btn>button:last-child{
+       color: red;
+}

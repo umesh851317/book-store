@@ -1,0 +1,86 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+.pro {
+       display: flex;
+       width: 99vw;
+       min-height: 100vh;
+       background-color: #d2cfcf;
+       padding: 40px 50px;
+       gap: 15px;
+}
+
+
+.profile {
+       width: 35%;
+       min-height: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 15px;
+}
+
+.profile>.profileImg {
+       width: 100%;
+       display: flex;
+       background-color: white;
+       box-shadow: 1px 1px 8px gray;
+
+}
+
+.EditSection {
+       width: 100%;
+       min-height: 65%;
+       background-color: #fefefe;
+       display: flex;
+       flex-direction: column;
+       box-shadow: 1px 1px 8px gray;
+
+}
+
+.EditSection>div {
+       padding: 10px 35px;
+}
+
+.EditSection>div>h1 {
+       font-size: 24px;
+       color: rgb(156, 153, 153);
+       font-weight: 700;
+}
+
+.EditSection>div>ul {
+       color: black;
+       font-size: larger;
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+}
+
+.mainDetails {
+       width: 65%;
+       height: auto;
+       padding: 35px;
+       background-color: white;
+       box-shadow: 1px 1px 8px gray;
+       /* scrollbar-width: none; */
+}
+
+main > .login {
+       display: flex;
+       min-height: 100vh;
+       justify-content: center;
+       align-items: center;
+}
+
+main > .login a{
+       border: 1px solid;
+       width: 55px;
+       border-radius: 5px;
+       text-align: center;
+       background-color: blue;
+       color: white;
+       padding: 2px;
+}

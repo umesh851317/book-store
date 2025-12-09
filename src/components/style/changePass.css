@@ -1,0 +1,42 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+
+.Change {
+       width: inherit;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       /* justify-content: flex-start; */
+       gap: 10px;
+}
+
+.Change>h1 {
+       font-size: xx-large;
+       font-weight: 600;
+}
+
+.Change>.pass {
+       display: flex;
+       flex-direction: column;
+}
+
+.Change>.pass span {
+       font-size: large;
+       color: gray;
+}.Change>.pass input{
+       border: gray solid;
+       width: 30%;
+       border-radius: 7px;
+       padding: 5px;
+}
+.Change > button{
+       width: 100px;
+       border: solid;
+       border-radius: 10px;
+       background-color: blue;
+       color: white;
+       height: 40px;
+}

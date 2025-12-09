@@ -1,0 +1,96 @@
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+
+.spinner {
+       position: relative;
+       top: 250px;
+       width: 30px;
+       height: 30px;
+       border: 4px solid #ccc;
+       border-top-color: #333;
+       border-radius: 50%;
+       animation: spin 0.8s linear infinite;
+       margin: auto;
+}
+
+@keyframes spin {
+       to {
+              transform: rotate(360deg);
+       }
+}
+
+.similarBook {
+       display: flex;
+       flex-direction: column;
+}
+
+.similarBook>h1 {
+       font-size: xx-large;
+       font-weight: bold;
+       margin: 10px 25px;
+
+}
+
+.similarBook>.book {
+       display: flex;
+       padding: 10px 22px;
+       gap: 8px;
+       overflow-x: scroll;
+       scrollbar-width: none;
+}
+
+.similarBook>.book>a {
+       border: 1px solid gray;
+       width: 200px;
+       min-height: 322px;
+       border-radius: 10px;
+       padding: 10px;
+       margin-bottom: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 15px;
+       box-shadow: 1px 1px 3px gray
+}
+
+.similarBook>.book>a>.img img {
+       min-width: 130px;
+       border: 1px solid rgb(244, 240, 240);
+       height: 200px;
+}
+
+.similarBook>.book>a>.bookDetail {
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+}
+
+.similarBook>.book>a>.bookDetail>.bookTitle {
+       font-size: 17px;
+       line-height: 20px;
+       word-wrap: normal;
+       color: black;
+}
+
+.similarBook>.book>a>.bookDetail>.prise {
+       display: flex;
+       gap: 10px;
+}
+
+.similarBook>.book>a>.bookDetail>.prise .curr {
+       font-weight: 600;
+}
+
+.similarBook>.book>a>.bookDetail>.prise .totalPrise {
+       font-weight: 600;
+       color: gray;
+       text-decoration: line-through;
+}
+
+.similarBook>.book>a>.bookDetail>.prise .disCount {
+       color: green;
+       font-weight: 600;
+}

@@ -1,0 +1,158 @@
+.IdProf {
+       box-sizing: border-box;
+       width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+}
+
+.IdProf>.select {
+       display: flex;
+       justify-content: space-between;
+}
+
+.IdProf>.select>span {
+       font-size: xx-large;
+       font-weight: 600;
+}
+
+.IdProf>.select>select {
+       border: solid;
+       height: 40px;
+       font-size: larger;
+       background-color: blue;
+       color: white;
+       border-radius: 5px;
+}
+
+.IdProf>.select>select option {
+       background-color: aliceblue;
+       color: black;
+}
+
+.IdProf>.cardInfo {
+       width: inherit;
+       height: auto;
+}
+
+.IdProf>.cardInfo>.card {
+       display: flex;
+       flex-direction: column;
+       /* text-transform: uppercase; */
+}
+
+.IdProf>.cardInfo>.card>div {
+       border: 1px solid rgb(90, 90, 90);
+       border-radius: 5px;
+       margin: 10px 0;
+       display: flex;
+       flex-direction: column;
+       padding: 5px;
+       width: 55%;
+}
+
+.IdProf>.cardInfo>.card>div>input {
+       outline: none;
+}
+
+.IdProf>.cardInfo>.card>.img>input {
+       border: 1px solid;
+       border-radius: 4px;
+       width: 20%;
+}
+
+.IdProf>.cardInfo>.card>.btn,
+.IdProf>.cardInfo>.card>.TC {
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       padding: 15px;
+       border: none;
+       margin: 0;
+}
+
+.IdProf>.cardInfo>.card>.TC>span {
+       margin: 0;
+       padding: 0;
+       width: 97%;
+}
+
+.IdProf>.cardInfo>.card>.btn {
+       width: 100%;
+       display: flex;
+       justify-content: start;
+       gap: 10px;
+}
+
+.IdProf>.cardInfo>.card>.btn>button {
+       border: solid;
+       width: 10%;
+       padding: 5px 0;
+       border-radius: 5px;
+}
+
+.IdProf>.cardInfo>.card>.btn>button:first-child {
+       background-color: #148af8;
+       ;
+       border: solid #148af8;
+       ;
+       color: white;
+}
+
+.IdProf>.cardInfo>.card>.btn>button:last-child {
+       background-color: white;
+       ;
+       border: solid white;
+       color: blue;
+       font-weight: 600;
+}
+
+.IdProf>.cardInfo>.card>.btn>button:last-child:hover {
+       color: red;
+}
+
+
+
+.IdProf>.heading {
+       padding: 25px 0;
+}
+
+.IdProf>.heading>h1 {
+       font-weight: bold;
+       font-size: x-large;
+}
+
+.IdProf>.info {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+}
+
+.IdProf>.info>div {
+       display: flex;
+       flex-direction: column;
+       line-height: 22px;
+       text-transform: uppercase;
+
+}
+
+.IdProf>.info>div>span {
+       color: gray;
+       font-size: larger;
+}
+
+.IdProf>.info>div>p {
+       font-size: larger;
+}
+
+.IdProf>.info>button {
+       width: 8%;
+       padding: 5px;
+       background-color: #148af8;
+       border-radius: 5px;
+       color: white;
+       border: none;
+
+}
