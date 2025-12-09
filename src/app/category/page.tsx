@@ -12,7 +12,7 @@ const page = () => {
        const [curCatgry, setCurCatgry] = useState("All")
        const [filterBooks, setFilterBooks] = useState<Book[]>([]);
        const [isWishlist, setIsWishList] = useState<any>({})
-       const [cartStatus,setCartStatus] = useState()
+       const [cartStatus, setCartStatus] = useState()
 
 
 
@@ -20,7 +20,6 @@ const page = () => {
               try {
                      const respo = await axios.get(`/api/getBookData/allBooks`)
                      setAllBook(respo.data.data || [])
-
                      setLoading(false); // Stop loader IMMEDIATELY after data fetch
               }
               catch (err) {
@@ -29,14 +28,14 @@ const page = () => {
               }
        }
 
-       const isCart = async (bookId: any) => {
-              try {
-                     const respo = await axios.get(`/api/getBookData/cart?bookId=${bookId}`);
-              } catch (err) {
-                     console.log(err)
-                     setLoading(false); // still stop loader on error
-              }
-       }
+       // const isCart = async (bookId: any) => {
+       //        try {
+       //               const respo = await axios.get(`/api/getBookData/cart?bookId=${bookId}`);
+       //        } catch (err) {
+       //               console.log(err)
+       //               setLoading(false); // still stop loader on error
+       //        }
+       // }
 
        useEffect(() => {
               getData();
@@ -100,7 +99,9 @@ const page = () => {
                                                         <div key={book.id} className='flex flex-col items-center border rounded-2xl w-60 min-h-72 shadow-[1px_2px_5px_gray]'>
                                                                <div className='p-6'>
                                                                       <div className='flex justify-center gap-8 border w-48 relative'>
-                                                                             <img src={book.image_link} className='w-36 h-40 p-2' />
+                                                                             <a href="">
+                                                                                    <img src={book.image_link} className='w-36 h-40 p-2' />
+                                                                             </a>
                                                                              <button className='absolute right-[2px] top-[2px] text-2xl'>
                                                                                     <i
                                                                                            className={isWishlist ? "fa-solid fa-heart" : "fa-regular fa-heart"}
@@ -115,7 +116,7 @@ const page = () => {
                                                                              <div className="text-green-700">({book?.discount}%OFF)</div>
                                                                       </div>
                                                                       <div className='w-48 py-2'>
-                                                                             <button className='w-48 border rounded-[8px]' > { isCart(book.id) ? "remove from cart" : "add to cart"}</button>
+                                                                             <button className='w-48 border rounded-[8px]' >add to cart</button>
                                                                       </div>
                                                                </div>
                                                         </div>
