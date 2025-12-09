@@ -12,7 +12,6 @@ const page = () => {
        const [curCatgry, setCurCatgry] = useState("All")
        const [filterBooks, setFilterBooks] = useState<Book[]>([]);
        const [isWishlist, setIsWishList] = useState<any>({})
-       const [cartStatus, setCartStatus] = useState()
 
 
 
