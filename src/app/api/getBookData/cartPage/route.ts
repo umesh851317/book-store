@@ -84,7 +84,7 @@ export async function DELETE(req: NextRequest) {
               return NextResponse.json({
                      success: true,
                      data: DeleteUser,
-                     message: "Delete user succefully"
+                     message: "Delete cart book succefully"
               })
        } catch (err) {
               return NextResponse.json({

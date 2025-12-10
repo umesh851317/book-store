@@ -16,9 +16,11 @@ const page = () => {
        const [filterBooks, setFilterBooks] = useState<Book[]>([]);
        const [isWishlist, setIsWishList] = useState<{ [key: string]: boolean }>({});
        const [wishListId, SetWishListId] = useState<{ [key: string]: string }>({});
+       const [isCart, setIsCart] = useState<{ [key: string]: boolean }>({});
+       const [cartId, setCartId] = useState<{ [key: string]: string }>({});
+
        const toggleWishlist = async (bookId: string) => {
               if (!userId) return alert("please login first");
-
               try {
                      const wasSaved = isWishlist[bookId]; // Save OLD VALUE
 
@@ -43,6 +45,36 @@ const page = () => {
               getData();  // will always run
        };
 
+       const toggleCart = async (bookId: string) => {
+              const data = {
+                     bookId,
+                     qty: 1,
+                     userId,
+                     saveLater: false
+
+              }
+              if (!userId) return alert("please login first");
+              try {
+                     const wasCart = isCart[bookId];
+
+                     // Update UI instantly
+                     setIsCart(prev => ({
+                            ...prev,
+                            [bookId]: !prev[bookId]
+                     }));
+
+                     if (wasCart) {
+                            // remove
+                            await axios.delete(`/api/getBookData/cartPage?cartId=${cartId[bookId]}`);
+                     } else {
+                            // add
+                            await axios.post("/api/getBookData/cart", data);
+                     }
+
+              } catch (err) {
+                     console.log(err);
+              }
+       }
 
 
        const getData = async () => {
@@ -59,14 +91,11 @@ const page = () => {
 
        const setWishlist = async () => {
               try {
-                     // Fetch wishlist
                      const respo1 = await axios.get(`/api/profile/wishListPage`);
-                     console.log("dvcv", respo1.data.data)
-                     // Convert the array of wishlist items into a map
                      let wishlistState: any = {};   // bookId
                      let wishlistUniq: any = {};    // unique id 
                      respo1.data.data.forEach((b: any) => {
-                            wishlistState[b.bookId] = true;   // ✔ SET to true, do NOT toggle
+                            wishlistState[b.bookId] = true;   // ✔ SET to true
                             wishlistUniq[b.bookId] = b.id
                      });
                      setIsWishList(wishlistState);
@@ -77,18 +106,27 @@ const page = () => {
               }
        }
 
-       // const isCart = async (bookId: any) => {
-       //        try {
-       //               const respo = await axios.get(`/api/getBookData/cart?bookId=${bookId}`);
-       //        } catch (err) {
-       //               console.log(err)
-       //               setLoading(false); // still stop loader on error
-       //        }
-       // }
+       const setCart = async () => {
+              try {
+                     const respo1 = await axios.get(`/api/getBookData/cartPage?`);
+                     console.log("cartBooks", respo1.data.data)
+                     let cartState: any = {};   // bookId
+                     let cartUniq: any = {};    // unique id 
+                     respo1.data.data.forEach((b: any) => {
+                            cartState[b.bookId] = true;   // ✔ SET to true
+                            cartUniq[b.bookId] = b.id
+                     });
+                     setIsCart(cartState);
+                     setCartId(cartUniq)
+              } catch (err) {
+                     console.log(err)
+              }
+       }
 
        useEffect(() => {
               getData();
-              setWishlist()
+              setWishlist();
+              setCart();
        }, []); // fetch data only once
 
        useEffect(() => {
@@ -160,11 +198,14 @@ const page = () => {
                                                                       <div className='text leading-4 font-bold py-2'>{book.title}</div>
                                                                       <div className='flex gap-3 font-bold'>
                                                                              <div>₹{book.price - (book.price * book.discount) / 100}</div>
-                                                                             <div className=" text-gray-500">₹{book?.price}</div>
+                                                                             <div className="text-gray-500">₹{book?.price}</div>
                                                                              <div className="text-green-700">({book?.discount}%OFF)</div>
                                                                       </div>
                                                                       <div className='w-48 py-2'>
-                                                                             <button className='w-48 border rounded-[8px]' >add to cart</button>
+                                                                             <button onClick={() => toggleCart(book.id)}
+                                                                                    className='w-48 border rounded-[8px]' >
+                                                                                    {isCart[book.id] ? "remove from cart" : "add to cart"}
+                                                                             </button>
                                                                       </div>
                                                                </div>
                                                         </div>

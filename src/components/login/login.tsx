@@ -2,8 +2,8 @@
 import React, { useState } from 'react'
 import "../../components/style/signIn.css"
 import axios from 'axios'
-import { useRouter } from 'next/navigation' 
-import Cookie  from 'js-cookie';
+import { useRouter } from 'next/navigation'
+import Cookie from 'js-cookie';
 
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
 
-  const router = useRouter(); 
+  const router = useRouter();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -34,22 +34,16 @@ const Login = () => {
       }
       if (userData.success) {
         setMessage(userData.message)
-        Cookie.set("userId",userData.data.id)
+        Cookie.set("userId", userData.data.id)
         setTimeout(() => {
           router.push("/profile");
-        },1000)
+        }, 1000)
       }
     } catch (err) {
       console.error("Login Failed", err)
       alert("Invalid email or password")
     }
-
   }
-
-
-
-
-
   return (
     <form onSubmit={handleSubmit} className='sign'>
       <input
@@ -61,7 +55,7 @@ const Login = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"
-        placeholder='Passrd' />
+        placeholder='password' />
 
       <label className='forget' htmlFor="">Forget password ?</label>
       <button type='submit' >Login</button>

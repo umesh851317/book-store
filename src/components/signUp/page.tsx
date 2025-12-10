@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import "../../components/style/signUp.css"
 import axios, { Axios } from 'axios'
 import { useRouter } from 'next/navigation'
-
-
 const SignUp = ({ onSubmit }: any) => {
   const [isEmpty, setIsEmpty] = useState(true)
   const [name, setName] = useState("")
@@ -15,14 +13,10 @@ const SignUp = ({ onSubmit }: any) => {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
   const route = useRouter();
-
   const [userData, setUserData] = useState([])
-
   const ValdInp = { border: "3px solid green" };
   const InValdInp = { border: "3px solid red" };
   const DefaultInp = { border: "1px solid black" };
-
-
   useEffect(() => {
     setIsEmpty(name === "" || email === "" || password === "" || confPass === "" || password !== confPass || !isChecked
     );
@@ -58,8 +52,6 @@ const SignUp = ({ onSubmit }: any) => {
       console.log("somthing is wrong", err)
     }
   }
-
-
   const getData = async () => {
     try {
       const res = await axios.get(`/api/user/SignUp`);
@@ -73,10 +65,6 @@ const SignUp = ({ onSubmit }: any) => {
       alert("Error fetching users");
     }
   };
-
-
-
-
   return (
     <form className='signUp' onSubmit={handleSubmit}>
       <input
