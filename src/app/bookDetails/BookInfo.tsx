@@ -102,8 +102,6 @@ const BookInfo = () => {
        if (loading) {
               return (
                      <div className="loader-box">
-                            <h3>Loading books...</h3>
-                            {/* Optional spinner */}
                             <div className="spinner"></div>
                      </div>
               );

@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation'
 
 const SignUp = ({ onSubmit }: any) => {
   const [isEmpty, setIsEmpty] = useState(true)
-  const [name, setName] = useState("umesh")
-  const [email, setEmail] = useState("Up7782278@gmail.com")
-  const [number, setNumber] = useState("7877480923")
-  const [password, setPassword] = useState("1234")
-  const [confPass, setConPass] = useState("1234")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [number, setNumber] = useState("")
+  const [password, setPassword] = useState("")
+  const [confPass, setConPass] = useState("")
   const [isChecked, setIsChecked] = useState(false);
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
@@ -34,7 +34,7 @@ const SignUp = ({ onSubmit }: any) => {
     const data = {
       name,
       email,
-      number,   
+      number,
       password,
       role: "role"
     }
@@ -80,7 +80,11 @@ const SignUp = ({ onSubmit }: any) => {
   return (
     <form className='signUp' onSubmit={handleSubmit}>
       <input
-        style={name === "" ? (InValdInp) : (ValdInp)}
+        style={
+          name === ""
+            ? DefaultInp         // Initial: black border
+            : ValdInp             // When user types
+        }
         value={name}
         onChange={(e) => setName(e.target.value)}
         type="text"
@@ -88,21 +92,33 @@ const SignUp = ({ onSubmit }: any) => {
       />
       <input
         type="email"
-        style={email === "" ? (InValdInp) : (ValdInp)}
+        style={
+          email === ""
+            ? DefaultInp
+            : ValdInp
+        }
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email Address"
       />
       <input
         type="number"
-        style={email === "" ? (InValdInp) : (ValdInp)}
+        style={
+          number === ""
+            ? DefaultInp
+            : ValdInp
+        }
         value={number}
         onChange={(e) => setNumber(e.target.value)}
         placeholder="Enter mobile number"
       />
-      
+
       <input
-        style={password === "" ? (InValdInp) : (ValdInp)}
+        style={
+          password === ""
+            ? DefaultInp
+            : ValdInp
+        }
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"

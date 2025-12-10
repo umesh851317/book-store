@@ -83,7 +83,7 @@ export async function GET(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
        const url = new URL(req.url)
-       const id = url.searchParams.get("bookId") as string;  // cartId
+       const id = url.searchParams.get("wishListId") as string;  
        try {
               const userId = req.cookies.get("userId")?.value;
               const DeleteUser = await db.wishlist.delete({

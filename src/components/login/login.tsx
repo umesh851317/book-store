@@ -7,8 +7,8 @@ import Cookie  from 'js-cookie';
 
 
 const Login = () => {
-  const [email, setEmail] = useState("Up7782278@gmail.com")
-  const [password, setPassword] = useState("1234")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
 
