@@ -57,16 +57,20 @@ const Nav = () => {
                      <div className='list'>
                             <ul>
                                    <li><a href="./">Home</a></li>
-                                   <li><a href="/category">Library</a></li>
-                                   <li><a href="">About us</a></li>
+                                   <li><a href={`/category?display=${"none"}`}>Library</a></li>
+                                   <li><a href="/aboutPage">About us</a></li>
                                    <li><a href="">Privacy Policy</a></li>
                                    <li><a href="">Replacement Policy</a></li>
-                                   
+
                             </ul>
                      </div>
                      <div className='search'>
                             <ul className='ul1'>
-                                   <li><a href="/"><i className="fa fa-search" aria-hidden="true"></i></a></li>
+                                   <li>
+                                          <a href={`/category?display=${"block"}`}>
+                                                 <i className="fa fa-search" aria-hidden="true"></i>
+                                          </a>
+                                   </li>
                                    <li><a href="/"><i className="fa fa-book" aria-hidden="true"></i></a></li>
                                    <li><a href="/cart"><i className="fa fa-cart-plus" aria-hidden="true"></i></a></li>
                                    <li><a href="/profile"><i className="fa fa-user" aria-hidden="true"></i></a></li>
@@ -78,7 +82,7 @@ const Nav = () => {
               </nav>
        )
 
-       
+
 }
 
 export default Nav
